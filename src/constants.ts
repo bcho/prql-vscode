@@ -19,6 +19,7 @@ export const OpenSqlPreview = `${ExtensionId}.openSqlPreview`;
 export const GenerateSqlFile = `${ExtensionId}.generateSqlFile`;
 export const CopySqlToClipboard = `${ExtensionId}.copySqlToClipboard`;
 export const ViewSettings = `${ExtensionId}.viewSettings`;
+export const RunQuery = `${ExtensionId}.runQuery`;
 
 // PRQL extension setting keys
 export const AddCompilerSignatureComment = 'addCompilerSignatureComment';

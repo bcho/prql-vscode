@@ -28,7 +28,8 @@
     "onCommand:prql.openSqlPreview",
     "onCommand:prql.generateSqlFile",
     "onCommand:prql.copySqlToClipboard",
-    "onCommand:prql.viewSettings"
+    "onCommand:prql.viewSettings",
+    "onCommand:prql.runQuery"
   ],
   "contributes": {
     "languages": [
@@ -79,6 +80,12 @@
         "title": "View PRQL Settings",
         "category": "PRQL",
         "icon": "$(gear)"
+      },
+      {
+        "command": "prql.runQuery",
+        "title": "Run Query",
+        "category": "PRQL",
+        "icon": "$(play)"
       }
     ],
     "menus": {
@@ -114,6 +121,11 @@
           "command": "prql.copySqlToClipboard",
           "when": "prql.sqlPreviewActive || resourceLangId == prql",
           "group": "navigation"
+        },
+        {
+          "command": "prql.runQuery",
+          "when": "resourceLangId == prql",
+          "group": "navigation"
         }
       ],
       "editor/title/context": [
@@ -135,6 +147,11 @@
         {
           "command": "prql.copySqlToClipboard",
           "when": "prql.sqlPreviewActive || resourceLangId == prql",
+          "group": "prql"
+        },
+        {
+          "command": "prql.runQuery",
+          "when": "resourceLangId == prql",
           "group": "prql"
         }
       ]

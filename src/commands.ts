@@ -70,6 +70,10 @@ export function registerCommands(context: ExtensionContext) {
       window.showInformationMessage(`Copied ${sqlFileName} to Clipboard.`);
     }
   });
+
+  registerCommand(context, constants.RunQuery, () => {
+    console.log('here, runQuery');
+  });
 }
 
 /**

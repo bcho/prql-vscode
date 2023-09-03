@@ -13,6 +13,7 @@ export const ExtensionDisplayName = 'PRQL';
 // PRQL webview constants
 export const SqlPreviewPanel = `${ExtensionId}.sqlPreviewPanel`;
 export const SqlPreviewTitle = 'SQL Preview';
+export const QueryResultPanel = `${ExtensionId}.queryResultPanel`;
 
 // PRQL extension command constants
 export const OpenSqlPreview = `${ExtensionId}.openSqlPreview`;

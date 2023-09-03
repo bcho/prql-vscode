@@ -15,6 +15,7 @@ import { SqlPreview } from './views/sqlPreview';
 import { TextEncoder } from 'util';
 import { compile } from './compiler';
 import * as constants from './constants';
+import { QueryResult } from './views/queryResult';
 
 /**
  * Registers PRQL extension commands.
@@ -71,8 +72,13 @@ export function registerCommands(context: ExtensionContext) {
     }
   });
 
-  registerCommand(context, constants.RunQuery, () => {
-    console.log('here, runQuery');
+  registerCommand(context, constants.RunQuery, (documentUri: Uri) => {
+    if (!documentUri && window.activeTextEditor) {
+      // use active text editor document Uri
+      documentUri = window.activeTextEditor.document.uri;
+    }
+
+    QueryResult.render(context, documentUri);
   });
 }
 

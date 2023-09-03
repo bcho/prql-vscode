@@ -1,5 +1,5 @@
 /**
- * PRQL compilation resust for sql preview and display.
+ * PRQL compilation result for sql preview and display.
  */
 export interface CompilationResult {
   status: 'ok' | 'error';
